@@ -4496,7 +4496,7 @@ case 'loli':
                     case 'nezuko': 
                     case 'senku':   
             reply(`Sabar Wibu`)
-            kurr1 = await fetchJson(`https://myselfff.herokuapp.com/docs/anime?query=${command}`)
+            kurr1 = await fetchJson(`https://myselfff.herokuapp.com/docs/anime/${command}`)
             kurr2 = await getBuffer(kurr1.result.list)
             kurr.sendMessage(from, kurr2, image, {thumbnail: Buffer.alloc(0), caption: `Nih Kak`, quoted : ftrol})
               break
