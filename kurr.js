@@ -4232,7 +4232,7 @@ sticWait(from)
 ini_url = `https://api.xteam.xyz/dl/tiktok?url=${ini_url}&APIKEY=f4a27fd3b3a157f7`
 get_result = await fetchJson(ini_url)
 ini_buffer = await getBuffer(get_result.result.link_dl1)
-kurr.sendMessage(from, ini_buffer, video, { quoted: ftrol })
+kurr.sendMessage(from, ini_buffer, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: mek })
              break
 // nfsw
 case 'chiisaihentai':
