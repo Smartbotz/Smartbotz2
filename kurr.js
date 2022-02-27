@@ -6514,26 +6514,19 @@ var nn = body.slice(9)
                 kurr.sendMessage(from, 'Succes!', text, {quoted: mek})
                 await sleep(3000)
                 kurr.groupLeave(from)
-					break      
-    case 'ytmp4':
-          if (args.length < 1) return reply('Link?')
-          ini_url = args[0]
-          reply(mess.wait)
-          get_result = await fetchJson(`http://hadi-api.herokuapp.com/api/ytvideo?url=${ini_url}`)
-          get_result = get_result.result
-          ini_buffer = await getBuffer(get_result.album)
-                    let textx =`
-*YOUTUBE YTMP4*
-
-Judul : ${get_result.title}
-Viewer : ${get_result.viewer}
-
-*VIDEO DALAM PROSES....*
-*PROSES VIDEO TERGANTUNG PADA DURASI *
-            `
-                    kurr.sendMessage(from, ini_buffer, image, { quoted: mek, caption: textx})
-          ini_vid = await getBuffer(get_result.download_video)
-          await kurr.sendMessage(from, ini_vid, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: mek })
+               break
+               case 'ytmp4':
+               if (args.length < 1) return reply('Link?')
+                    ini_url = args[0]         
+                    get_result = await fetchJson(`http://api.lolhuman.xyz/api/ytvideo2?apikey=${lolkey}&url=${ini_url}`)
+                    get_result = get_result.result
+                    txt = `Title : ${get_result.title}\n`
+                    txt += `Size : ${get_result.size}\n`
+                    txt += `Link : ${get_result.link}\n`
+                    buffer = await getBuffer(get_result.thumbnail)
+                    kurr.sendMessage(from, buffer, image, { quoted: mek, caption: txt })
+                    get_audio = await getBuffer(get_result.link)
+                    kurr.sendMessage(from, get_audio, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: mek })
 						break
 						case 'ytsearch':
 						case 'yts':
@@ -6565,25 +6558,18 @@ Viewer : ${get_result.viewer}
                 reply(`Error: ${e.message}`)
             }
             break
-    case 'ytmp3':
-          if (args.length < 1) return reply('Link?')
-           ini_url = args[0]         
-          reply(mess.wait)      
-          get_result = await fetchJson(`http://hadi-api.herokuapp.com/api/ytaudio?url=${ini_url}`)
-          get_result = get_result.result
-          ini_buffer = await getBuffer(get_result.album)
-                    let textf =`
-*YOUTUBE YTMP3*
-
-Judul : ${get_result.title}
-Viewer : ${get_result.viewer}
-
-*AUDIO DALAM PROSES....*
-*PROSES AUDIO TERGANTUNG PADA DURASI *
-            `
-                    kurr.sendMessage(from, ini_buffer, image, { quoted: mek, caption: textf})
-          ini_vid = await getBuffer(get_result.download_audio)
-          await kurr.sendMessage(from, ini_vid, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: mek})          
+               case 'ytmp3':
+               if (args.length < 1) return reply('Link?')
+                    ini_url = args[0]         
+                    get_result = await fetchJson(`https://api.lolhuman.xyz/api/ytaudio2?apikey=${lolkey}&url=${ini_url}`)
+                    get_result = get_result.result
+                    txt = `Title : ${get_result.title}\n`
+                    txt += `Size : ${get_result.size}\n`
+                    txt += `Link : ${get_result.link}\n`
+                    buffer = await getBuffer(get_result.thumbnail)
+                    kurr.sendMessage(from, buffer, image, { quoted: mek, caption: txt })
+                    get_audio = await getBuffer(get_result.link)
+                    kurr.sendMessage(from, get_audio, audio, { mimetype: 'audio/mp4', filename: `${get_result.title}.mp3`, quoted: mek})       
 break
 						  case 'playy':
 						  if (args.length == 0) return reply(`Example: ${prefix + command} vide 1detik`)
