@@ -2479,7 +2479,7 @@ case 'gamemenu':
 _え ${prefix}tebakgambar_
 _え ${prefix}caklontong_
 _え ${prefix}tebakbendera_  
-_え ${prefix}tts_
+_え ${prefix}tictactoe_
 _え ${prefix}suit_
 _え ${prefix}slots_    
        
