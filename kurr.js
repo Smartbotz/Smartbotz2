@@ -2288,31 +2288,7 @@ case 'wibumenu':
         ini_txt = `*${get_result.character} pernah berkata*\n\n`
        ini_txt += `~${get_result.quote}`
        
-       menu = `*─❒ WIBU MENU*
-_え ${prefix}zoro_ 
-_え ${prefix}luffy_ 
-_え ${prefix}sanji_ 
-_え ${prefix}ussop_ 
-_え ${prefix}nami_ 
-_え ${prefix}copper_ 
-_え ${prefix}naruto_ 
-_え ${prefix}minato_ 
-_え ${prefix}sasuke_ 
-_え ${prefix}sakura_ 
-_え ${prefix}boruto_ 
-_え ${prefix}sarada_ 
-_え ${prefix}mitsuki_ 
-_え ${prefix}orochimaru_ 
-_え ${prefix}tsunade_ 
-_え ${prefix}kakashi_ 
-_え ${prefix}killua_ 
-_え ${prefix}gon_ 
-_え ${prefix}saitama_ 
-_え ${prefix}rimuru_ 
-_え ${prefix}natsu_ 
-_え ${prefix}tanjirou_ 
-_え ${prefix}nezuko_ 
-_え ${prefix}senku_
+       menu = `*─❒ WIBU MENU*_
 _え ${prefix}loli_
 _え ${prefix}neko_
 _え ${prefix}sagiri_
