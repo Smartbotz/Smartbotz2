@@ -1466,8 +1466,6 @@ _え ${prefix}toolsmenu_
 
 _え ${prefix}wibumenu_
 
-_え ${prefix}nsfwmenu_
-
 _え ${prefix}gamemenu_
 
 _え ${prefix}othermenu_
