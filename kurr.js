@@ -4203,9 +4203,9 @@ case 'tiktokdl':
 if (args.length == 0) return reply(`Link Nya Mana`)
 ini_url = args[0]
 sticWait(from)
-ini_url = `https://api.xteam.xyz/dl/tiktok?url=${ini_url}&APIKEY=f4a27fd3b3a157f7`
+ini_url = `https://api.lolhuman.xyz/api/tiktok3?apikey=${lolkey}&url=${ini_url}`
 get_result = await fetchJson(ini_url)
-ini_buffer = await getBuffer(get_result.result.link_dl1)
+ini_buffer = await getBuffer(get_result.result)
 kurr.sendMessage(from, ini_buffer, video, { mimetype: 'video/mp4', filename: `${get_result.title}.mp4`, quoted: mek })
              break
 // nfsw
