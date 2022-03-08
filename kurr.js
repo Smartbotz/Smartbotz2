@@ -6860,7 +6860,6 @@ ter = command[1].toLowerCase()
 					break
 				break
 				case 'addsticker':
-				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					if (!isQuotedSticker) return reply('Reply stiker')
 					nm = body.slice(12)
 					if (!nm) return reply('Nama sticker nya apa?')
@@ -6872,7 +6871,6 @@ ter = command[1].toLowerCase()
 					kurr.sendMessage(from, `Sukses, silahkan cek dengan *${prefix}liststicker*`, MessageType.text, { quoted: mek })
 					break
 				case 'delsticker':
-				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					try {
 					 nmm = body.slice(12)
 					 wanu = setik.indexOf(nmm)
@@ -6895,7 +6893,6 @@ ter = command[1].toLowerCase()
 					kurr.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": setik } })
 					break
 					case 'addvn':
-					if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					if (!isQuotedAudio) return reply('Reply audio')
 					nm = body.slice(7)
 					if (!nm) return reply('Nama vn nya apa?')
@@ -6907,7 +6904,6 @@ ter = command[1].toLowerCase()
 					kurr.sendMessage(from, `Sukses, silahkan cek dengan *${prefix}listvn*`, MessageType.text, { quoted: mek })
 					break
 					case 'delvn':
-					if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					try {
 					 nmm = body.slice(7)
 					 wanu = vien.indexOf(nmm)
@@ -6930,7 +6926,6 @@ ter = command[1].toLowerCase()
 					kurr.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": vien } })
 					break
 				case 'addimage':
-				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					if (!isQuotedImage) return reply('Reply image')
 					nm = body.slice(10)
 					if (!nm) return reply('Nama image nya apa?')
@@ -6942,7 +6937,6 @@ ter = command[1].toLowerCase()
 					kurr.sendMessage(from, `Sukses, silahkan cek dengan *${prefix}listimage*`, MessageType.text, { quoted: mek })
 					break
 				case 'delimage':
-				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					try {
 					 nmm = body.slice(10)
 					 wanu = imagi.indexOf(nmm)
@@ -6965,7 +6959,6 @@ ter = command[1].toLowerCase()
 					kurr.sendMessage(from, teks.trim(), extendedText, { quoted: mek, contextInfo: { "mentionedJid": imagi } })
 					break
 				case 'addvideo':
-				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					if (!isQuotedVideo) return reply('Reply video')
 					nm = body.slice(10)
 					if (!nm) return reply('Nama video nya apa?')
@@ -6977,7 +6970,6 @@ ter = command[1].toLowerCase()
 					kurr.sendMessage(from, `Sukses, silahkan cek dengan *${prefix}videolist*`, MessageType.text, { quoted: mek })
 					break
 				case 'delvideo':
-				if (!isOwner && !mek.key.fromMe) return sticOwner(from)
 					try {
 					 nmm = body.slice(10)
 					 wanu = videonye.indexOf(nmm)
