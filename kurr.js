@@ -5358,11 +5358,11 @@ fs.unlinkSync(ran)
 		  break
     case 'slowmp3':            
           if (!isQuotedAudio) return reply('Reply Audionya')
-		  encmedia = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
-		  media = await kurr.downloadAndSaveMediaMessage(encmedia)
+		  encmediad = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
+		  mediad = await kurr.downloadAndSaveMediaMessage(encmediad)
 		  ran = getRandom('.mp3')
-  	      exec(`ffmpeg -i ${media} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
-		  fs.unlinkSync(media)
+  	      exec(`ffmpeg -i ${mediad} -filter:a "atempo=0.7,asetrate=44100" ${ran}`, (err, stderr, stdout) => {
+		  fs.unlinkSync(mediad)
 	      if (err) return reply('Error!')
 	      hah = fs.readFileSync(ran)
 	      kurr.sendMessage(from, hah, audio, {mimetype: 'audio/mp4', ptt:true, quoted: mek})
