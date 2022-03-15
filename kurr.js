@@ -1863,13 +1863,13 @@ _え ${prefix}mediafire [ _link_ ]_
 _え ${prefix}ytsearch [ _judul_ ]_
 _え ${prefix}ytmp4 [ _link yt_ ]_
 _え ${prefix}ytmp3 [ _link yt_ ]_
-_え ${prefix}play [ _judul lagu_ ]_
-_え ${prefix}play2  _judul lagu_ ]_
+_え ${prefix}play [ _judul lagu/video_ ]_
+_え ${prefix}play2 [ _judul lagu/video_ ]_
 _え ${prefix}video [ _judul video_ ]_
 _え ${prefix}tinyurl [ _link_ ]_
 _え ${prefix}spotify [ _link_ ]_
-_え ${prefix}spotifysearch [ _judul video_ ]_
-_え ${prefix}joox [ _judul video_ ]_
+_え ${prefix}spotifysearch [ _judul lagu_ ]_
+_え ${prefix}joox [ _judul lagu_ ]_
 _え ${prefix}fetch [ _link_ ]_
 _え ${prefix}igdl [ _link_ ]_
 _え ${prefix}fbdl [ _link_ ]_
