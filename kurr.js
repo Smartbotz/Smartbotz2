@@ -2207,6 +2207,7 @@ _え ${prefix}foliokiri [ _teks_ ]_
 _え ${prefix}foliokanan [ _teks_ ]_
 _え ${prefix}sticker_
 _え ${prefix}stickerwm [ _nama|author_ ]_
+_え ${prefix}takestick [ _nama|author_ ]_
 _え ${prefix}dadu_
 _え ${prefix}memeimg [ _reply sticker/foto_ ]_
 _え ${prefix}halah/hilih/huluh/heleh/holoh [ _teks_ ]_
