@@ -5214,19 +5214,26 @@ result = `*Judul :* ${res[0].judul}
 sendFileFromUrl(res[0].thumb, image, {quoted: mek, caption: result}).catch(e => {
   reply(result)
 })
-case 'mediafire':
-                
+break
+case 'mediafire':             
 reply('Loading...')
 if (!q) return reply(`Example : ${prefix + command} https://www.mediafire.com/download/v6hedu4r1ub6tty`)
 lah = await fetchJson(`https://api.lolhuman.xyz/api/mediafire?apikey=${lolkey}&url=${q}`)
 down = await getBuffer(lah.result.link)
 kurr.sendMessage(from, down, document, { mimetype: 'application/zip', filename: lah.result.filename, quoted: mek, contextInfo: {mentionedJid: [sender]}})
 break
-				case 'kalkulator':
+case 'kalkulator':
 if (!isRegistered) return sendButRegis(from, daftar1, daftar2, daftar3, { quoted: ftrol})
-				 var mtk = body.slice(12)
-				 teks = `${mtk} = ${Math_js.evaluate(mtk)}`
-				 reply(teks)
+if (args.length == 0) return reply(`[❗] Kirim perintah *.kalkulator [ Angka ]* \n
+Contoh : .kalkulator 12*12 \n
+*NOTE* : \n
+- Untuk Perkalian Menggunakan * \n
+- Untuk Pertambahan Menggunakan + \n
+- Untuk Pengurangan Mennggunakan - \n
+- Untuk Pembagian Menggunakan /`)
+		 var mtk = body.slice(12)
+		 teks = `${mtk} = ${Math_js.evaluate(mtk)}`
+		 reply(teks)
 				 break
 				case 'translate':
 				case 'ts':
